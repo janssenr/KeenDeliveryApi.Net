@@ -46,3 +46,73 @@ if (response != null)
     File.WriteAllBytes("labels.pdf", Convert.FromBase64String(response.Label));
 }
 ```
+
+Overwrite sender data
+```
+var shipment = new CreateShipment
+{
+    CompanyName = "Reciever",
+    StreetLine1 = "Street",
+    NumberLine1 = "1",
+    ZipCode = "3905 KW",
+    City = "Example",
+    Country = "NL",
+    Product = "DHL",
+    Service = "EUROPLUS",
+    Amount = 1,
+    Reference = "Shipment reference",
+    Weight = 10,
+    Label = new CreateShipmentLabel
+    {
+        Type = "PDF",
+        Size = "DEFAULT"
+    },
+    Sender = new Address
+    {
+        CompanyName = "KeenDelivery",
+        ContactPerson = "J. van Mourik",
+        StreetLine1 = "Wiltonstraat",
+        NumberLine1 = "41",
+        ZipCode = "3905KW",
+        City = "Veenendaal",
+        Country = "NL",
+    }
+};
+var response = await client.CreateShipment(shipment);
+if (response != null)
+{
+    File.WriteAllBytes("labels.pdf", Convert.FromBase64String(response.Label));
+}
+```
+
+## Get labels
+Get the BAT file for two different products. Both BAT and ZPL use the same request.
+```
+var label = new CreateLabel
+{
+    Shipments = new[] { ID, ID },
+    Type = "BAT"
+};
+var response = await client.CreateLabels(label);
+if (response != null)
+{
+    File.WriteAllBytes("labels.bat", Convert.FromBase64String(response.Labels));
+}
+```
+
+Get the PDF file for different shipments
+```
+var label = new CreateLabel
+{
+    Shipments = new[] { ID, ID },
+    Type = "PDF"
+};
+var response = await client.CreateLabels(label);
+if (response != null)
+{
+    File.WriteAllBytes("labels.pdf", Convert.FromBase64String(response.Labels));
+}
+```
+
+## Shipment status
+var response = await client.GetShipmentStatus(ID);
