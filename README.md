@@ -19,7 +19,6 @@ var client = new KeenDeliveryApiClient("FILL IN KEY HERE");
 
 ## Create a shipment
 Default shipment
-
 ```
 var shipment = new CreateShipment
 {
