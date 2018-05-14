@@ -1,4 +1,4 @@
-# KeenDeliveryApi.Net [![Build status](https://ci.appveyor.com/api/projects/status/m1c22rca95pl5o21?svg=true)](https://ci.appveyor.com/project/janssenr/keendeliveryapi-net) [![NuGet version](https://badge.fury.io/nu/keendelivery.svg)](https://badge.fury.io/nu/keendelivery)
+# KeenDeliveryApi.Net [![Build status](https://ci.appveyor.com/api/projects/status/m1c22rca95pl5o21?svg=true)](https://ci.appveyor.com/project/janssenr/keendeliveryapi-net) [![NuGet version](https://badge.fury.io/nu/keendeliveryapi.svg)](https://badge.fury.io/nu/keendeliveryapi)
 A C#/.net wrapper for the KeenDelivery API
 
 # Installation
