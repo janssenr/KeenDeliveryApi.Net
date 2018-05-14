@@ -115,4 +115,68 @@ if (response != null)
 ```
 
 ## Shipment status
+```
 var response = await client.GetShipmentStatus(ID);
+```
+
+## Parcel Shop finder
+Search parcel shops for multiple products
+```
+var searchData = new FindParcelShop
+{
+    StreetLine1 = "Wiltonstraat",
+    NumberLine1 = "41",
+    ZipCode = "3905 KW",
+    City = "Veenendaal",
+    Country = "NL",
+    Products = new[] { "DPD", "DHL" }
+};
+var response = await client.FindParcelShop(searchData);
+```
+
+Search parcel shops for one product
+```
+var searchData = new FindParcelShop
+{
+    StreetLine1 = "Wiltonstraat",
+    NumberLine1 = "41",
+    ZipCode = "3905 KW",
+    City = "Veenendaal",
+    Country = "NL",
+    Products = new[] { "DHL" }
+};
+var response = await client.FindParcelShop(searchData);
+```
+
+Search parcel shops on GEO location
+```
+var searchData = new FindParcelShop
+{
+    Latitude = "52.04037940000001",
+    Longitude = "5.564982699999973",
+    Products = new[] { "DPD", "DHL" }
+};
+var response = await client.FindParcelShop(searchData);
+```
+
+## Delivery Schedule finder
+Find the delivery schedule for mutliple products
+```
+var searchData = new FindDeliverySchedule
+{
+    ZipCode = "3905 KW",
+    Products = new[] { "DPD", "DHL" }
+};
+var response = await client.FindDeliverySchedule(searchData);
+```
+
+Find the delivery schedule for one product
+```
+var searchData = new FindDeliverySchedule
+{
+    ZipCode = "3905 KW",
+    Products = new[] { "DHL" }
+};
+var response = await client.FindDeliverySchedule(searchData);
+```
+
