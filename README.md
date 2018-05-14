@@ -41,7 +41,7 @@ var shipment = new CreateShipment
         Size = "DEFAULT"
     }
 };
-var response = await _client.CreateShipment(shipment);
+var response = await client.CreateShipment(shipment);
 if (response != null)
 {
     File.WriteAllBytes("labels.pdf", Convert.FromBase64String(response.Label));
