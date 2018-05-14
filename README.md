@@ -1,5 +1,5 @@
-# MyParcelApi.Net [![Build status](https://ci.appveyor.com/api/projects/status/heqg2l4f1mqtlrr0?svg=true)](https://ci.appveyor.com/project/janssenr/myparcelapi-net) [![NuGet version](https://badge.fury.io/nu/myparcelapi.svg)](https://badge.fury.io/for/nu/myparcelapi)
-A C#/.net wrapper for the MyParcel.nl API
+# KeenDeliveryApi.Net [![Build status](https://ci.appveyor.com/api/projects/status/m1c22rca95pl5o21?svg=true)](https://ci.appveyor.com/project/janssenr/keendeliveryapi-net) [![NuGet version](https://badge.fury.io/nu/keendelivery.svg)](https://badge.fury.io/nu/keendelivery)
+A C#/.net wrapper for the KeenDelivery API
 
 # Installation
 
